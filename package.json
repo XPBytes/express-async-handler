@@ -1,7 +1,8 @@
 {
   "name": "@xpbytes/express-async-handler",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Utility function to use async functions as express handlers",
+  "main": "dist/asyncHandler.js",
   "module": "dist/asyncHandler.js",
   "repository": "https://github.com/XPBytes/express-async-handler",
   "author": "Derk-Jan Karrenbeld <derk-jan@xpbytes.com>",
