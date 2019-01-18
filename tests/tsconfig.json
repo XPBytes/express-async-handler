@@ -5,6 +5,7 @@
   "compilerOptions": {
     "rootDir": "../",
     "baseUrl": "../src",
-    "noEmit": true
+    "outDir": "./dist",
+    "declaration": false
   }
 }

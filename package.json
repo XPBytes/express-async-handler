@@ -1,26 +1,31 @@
 {
   "name": "@xpbytes/express-async-handler",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Utility function to use async functions as express handlers",
-  "main": "dist/asyncHandler.js",
+  "module": "dist/asyncHandler.js",
   "repository": "https://github.com/XPBytes/express-async-handler",
   "author": "Derk-Jan Karrenbeld <derk-jan@xpbytes.com>",
   "license": "MIT",
   "files": [
     "README.md",
+    "LICENSE",
     "/dist"
   ],
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "tsc",
+    "prebuild:test": "rimraf tests/dist",
+    "build:test": "tsc --project tests/tsconfig.json",
     "lint": "tslint --project tsconfig.json",
-    "test": "ts-node node_modules/tape/bin/tape tests/**/*.ts",
+    "pretest": "yarn build:test",
+    "test": "tape -r esm tests/dist/**/*.test.js",
     "prepublish": "yarn build && yarn lint && yarn test"
   },
   "devDependencies": {
     "@types/express": "^4.16.0",
     "@types/supertest": "^2.0.7",
     "@types/tape": "^4.2.33",
+    "esm": "^3.1.0",
     "express": "^4.16.4",
     "husky": "^1.2.1",
     "lint-staged": "^8.1.0",
@@ -28,7 +33,6 @@
     "rimraf": "^2.6.3",
     "supertest": "^3.4.1",
     "tape": "^4.9.2",
-    "ts-node": "^7.0.1",
     "tslint": "^5.12.1",
     "tslint-config-prettier": "^1.17.0",
     "typescript": "^3.2.2"
