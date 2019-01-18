@@ -28,7 +28,8 @@ export function asyncHandler(
         return errorHandler(err, req, res, next)
       }
 
-      ;(next as ErrorRequestHandler)(err, req, res, next)
+      const nextError = next as ErrorRequestHandler
+      nextError(err, req, res, next)
     })
   }
 }
