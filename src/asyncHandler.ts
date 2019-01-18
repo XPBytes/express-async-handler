@@ -1,4 +1,4 @@
-import { Request, Response, NextFunction, ErrorRequestHandler } from 'express'
+import { ErrorRequestHandler, NextFunction, Request, Response } from 'express'
 
 export type AsyncRequestHandler = (req: Request, res: Response, next: NextFunction) => Promise<any>
 
