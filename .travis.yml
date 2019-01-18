@@ -1,0 +1,18 @@
+sudo: false
+matrix:
+  include:
+    - language: node_js
+      cache: yarn
+      node_js: node
+
+    - language: node_js
+      cache: yarn
+      node_js: iojs
+
+    - language: node_js
+      cache: yarn
+      node_js: lts/*
+
+  allow_failures:
+    - language: node_js
+      node_js: iojs
