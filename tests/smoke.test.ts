@@ -5,18 +5,30 @@ import test from 'tape'
 import { asyncHandler } from '../src/asyncHandler'
 
 const app = express()
-  .get('/test', asyncHandler(async (req, res, next) => {
-    const code = await Promise.resolve(204)
-    res.sendStatus(code).end()
-  }))
-  .get('/error', asyncHandler(async (req, res, next) => {
-    throw new Error('nope')
-  }))
-  .get('/error-with-handler', asyncHandler(async (req, res, next) => {
-    throw new Error('nope')
-  }, (err, req, res, next) => {
-    res.sendStatus(204).end()
-  }))
+  .get(
+    '/test',
+    asyncHandler(async (req, res, next) => {
+      const code = await Promise.resolve(204)
+      res.sendStatus(code).end()
+    })
+  )
+  .get(
+    '/error',
+    asyncHandler(async (req, res, next) => {
+      throw new Error('nope')
+    })
+  )
+  .get(
+    '/error-with-handler',
+    asyncHandler(
+      async (req, res, next) => {
+        throw new Error('nope')
+      },
+      (err, req, res, next) => {
+        res.sendStatus(204).end()
+      }
+    )
+  )
   .use((err: any, req: Request, res: Response, next: NextFunction) => {
     res.sendStatus(500).end()
   })
