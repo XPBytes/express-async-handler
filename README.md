@@ -21,3 +21,19 @@ app.get(
   })
 )
 ```
+
+You can optionally give a second argument `errorHandler`:
+
+```typescript
+function onError(err, req, res, next) {
+  // ...
+}
+
+app.get(
+  '/test',
+  asyncHandler(async (req, res, next) => {
+    const code = await Promise.resolve(204)
+    res.sendStatus(code).end()
+  }, onError)
+)
+```
