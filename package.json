@@ -1,6 +1,6 @@
 {
   "name": "@xpbytes/express-async-handler",
-  "version": "2.0.3",
+  "version": "2.1.0",
   "description": "Utility function to use async functions as express handlers",
   "main": "dist/asyncHandler.js",
   "module": "dist/asyncHandler.js",
