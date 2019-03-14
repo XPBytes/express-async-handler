@@ -1,8 +1,6 @@
 # Express Async Handler
 
-[![Build Status](https://travis-ci.com/XPBytes/express-async-handler.svg?branch=master)](https://travis-ci.com/XPBytes/express-async-handler)
-
-[![NPM Package Version](https://badge.fury.io/js/@xpbytes%2Fexpress-async-handler.svg)](https://npmjs.org/package/@xpbytes/express-async-handler)
+[![Build Status](https://travis-ci.com/XPBytes/express-async-handler.svg?branch=master)](https://travis-ci.com/XPBytes/express-async-handler) [![NPM Package Version](https://badge.fury.io/js/@xpbytes%2Fexpress-async-handler.svg)](https://npmjs.org/package/@xpbytes/express-async-handler) [![Maintainability](https://api.codeclimate.com/v1/badges/d6465e2c4c2806882745/maintainability)](https://codeclimate.com/github/XPBytes/express-async-handler/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/d6465e2c4c2806882745/test_coverage)](https://codeclimate.com/github/XPBytes/express-async-handler/test_coverage)
 
 Utility function to use async functions as express handlers
 
