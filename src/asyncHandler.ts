@@ -27,7 +27,6 @@ export function asyncHandler(
       if (typeof errorHandler !== 'undefined') {
         return errorHandler(err, req, res, next)
       }
-
       const nextError = next as ErrorRequestHandler
       nextError(err, req, res, next)
     })
