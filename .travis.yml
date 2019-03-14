@@ -7,15 +7,7 @@ matrix:
 
     - language: node_js
       cache: yarn
-      node_js: iojs
-
-    - language: node_js
-      cache: yarn
       node_js: lts/*
-
-  allow_failures:
-    - language: node_js
-      node_js: iojs
 
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
