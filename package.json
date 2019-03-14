@@ -20,7 +20,7 @@
     "lint": "tslint --project tsconfig.json",
     "pretest": "yarn build:test",
     "test": "tape -r esm tests/dist/**/*.test.js",
-    "test:coverage": "yarn nyc yarn test",
+    "test:coverage": "yarn nyc --reporter=lcov --reporter=html --reporter=text yarn test",
     "prepublish": "yarn test && yarn lint && yarn build"
   },
   "devDependencies": {
