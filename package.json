@@ -34,7 +34,7 @@
     "prettier": "^1.17.1",
     "rimraf": "^2.6.3",
     "supertest": "^4.0.2",
-    "tape": "^4.10.1",
+    "tape": "^4.10.2",
     "tslint": "^5.14.0",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.4.5"
