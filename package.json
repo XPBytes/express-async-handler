@@ -24,7 +24,7 @@
     "prepublish": "yarn test && yarn lint && yarn build"
   },
   "devDependencies": {
-    "@types/supertest": "^2.0.7",
+    "@types/supertest": "^2.0.8",
     "@types/tape": "^4.2.33",
     "esm": "^3.2.25",
     "express": "^4.17.1",
