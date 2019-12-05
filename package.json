@@ -37,7 +37,7 @@
     "tape": "^4.11.0",
     "tslint": "^5.14.0",
     "tslint-config-prettier": "^1.18.0",
-    "typescript": "^3.5.3"
+    "typescript": "^3.7.3"
   },
   "dependencies": {
     "@types/express": "^4.17.1"
