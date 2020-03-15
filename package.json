@@ -30,7 +30,7 @@
     "express": "^4.17.1",
     "husky": "^3.1.0",
     "lint-staged": "^9.5.0",
-    "nyc": "^14.1.1",
+    "nyc": "^15.0.0",
     "prettier": "^1.19.1",
     "rimraf": "^3.0.0",
     "supertest": "^4.0.2",
