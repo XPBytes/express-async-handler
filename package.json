@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "@types/supertest": "^2.0.8",
-    "@types/tape": "^4.2.33",
+    "@types/tape": "^4.2.34",
     "esm": "^3.2.25",
     "express": "^4.17.1",
     "husky": "^4.2.3",
