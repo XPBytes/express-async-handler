@@ -20,7 +20,6 @@
     "lint": "eslint .",
     "pretest": "yarn build:test",
     "test": "tape tests/dist/**/*.test.js",
-    "test:coverage": "yarn nyc --reporter=lcov --reporter=html --reporter=text yarn test",
     "prepublish": "yarn test && yarn lint && yarn build"
   },
   "peerDependencies": {
@@ -36,7 +35,6 @@
     "eslint": "^7.11.0",
     "eslint-config-prettier": "^6.13.0",
     "express": "^4.17.1",
-    "nyc": "^15.1.0",
     "prettier": "^2.1.2",
     "rimraf": "^3.0.2",
     "supertest": "^5.0.0",
