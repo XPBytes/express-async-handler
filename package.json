@@ -1,6 +1,6 @@
 {
   "name": "@xpbytes/express-async-handler",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "description": "Utility function to use async functions as express handlers",
   "main": "dist/asyncHandler.js",
   "module": "dist/asyncHandler.js",
@@ -17,46 +17,31 @@
     "build": "tsc",
     "prebuild:test": "rimraf tests/dist",
     "build:test": "tsc --project tests/tsconfig.json",
-    "lint": "tslint --project tsconfig.json",
+    "lint": "eslint .",
     "pretest": "yarn build:test",
-    "test": "tape -r esm tests/dist/**/*.test.js",
+    "test": "tape tests/dist/**/*.test.js",
     "test:coverage": "yarn nyc --reporter=lcov --reporter=html --reporter=text yarn test",
     "prepublish": "yarn test && yarn lint && yarn build"
   },
+  "peerDependencies": {
+    "@types/express": "^4.17.8"
+  },
   "devDependencies": {
-    "@types/supertest": "^2.0.9",
+    "@types/express": "^4.17.8",
+    "@types/node": "^14.11.10",
+    "@types/supertest": "^2.0.10",
     "@types/tape": "^4.13.0",
-    "esm": "^3.2.25",
+    "@typescript-eslint/eslint-plugin": "^4.4.1",
+    "@typescript-eslint/parser": "^4.4.1",
+    "eslint": "^7.11.0",
+    "eslint-config-prettier": "^6.13.0",
     "express": "^4.17.1",
-    "husky": "^4.2.5",
-    "lint-staged": "^10.2.2",
-    "nyc": "^15.0.1",
-    "prettier": "^2.0.5",
+    "nyc": "^15.1.0",
+    "prettier": "^2.1.2",
     "rimraf": "^3.0.2",
-    "supertest": "^4.0.2",
-    "tape": "^4.13.2",
-    "tslint": "^5.14.0",
-    "tslint-config-prettier": "^1.18.0",
-    "typescript": "^3.5.3"
+    "supertest": "^5.0.0",
+    "tape": "^5.0.1",
+    "typescript": "^4.0.3"
   },
-  "dependencies": {
-    "@types/express": "^4.17.1"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "linters": {
-      "*.{json,css,md}": [
-        "prettier --single-quote --no-semi --arrow-parens always --write",
-        "git add"
-      ],
-      "*{src,app,__{tests,mocks}__,test,tests}/**/*.{mjs,js,jsx,ts,tsx}": [
-        "prettier --single-quote --no-semi --arrow-parens always --write",
-        "git add"
-      ]
-    }
-  }
+  "dependencies": {}
 }

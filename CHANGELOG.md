@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.0.0
+
+- Update dependencies
+- CommonJS output
+- Use unkown instead of any
+
 ## 2.1.0
 
 - Update dependencies

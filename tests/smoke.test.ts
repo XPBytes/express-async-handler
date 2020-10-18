@@ -1,4 +1,4 @@
-import express, { NextFunction, Request, Response } from 'express'
+import express, { Request, Response } from 'express'
 import request from 'supertest'
 import test from 'tape'
 
@@ -7,29 +7,29 @@ import { asyncHandler } from '../src/asyncHandler'
 const app = express()
   .get(
     '/test',
-    asyncHandler(async (req, res, next) => {
+    asyncHandler(async (_, res) => {
       const code = await Promise.resolve(204)
       res.sendStatus(code).end()
     })
   )
   .get(
     '/error',
-    asyncHandler(async (req, res, next) => {
+    asyncHandler(async () => {
       throw new Error('nope')
     })
   )
   .get(
     '/error-with-handler',
     asyncHandler(
-      async (req, res, next) => {
+      async () => {
         throw new Error('nope')
       },
-      (err, req, res, next) => {
+      (_, __, res) => {
         res.sendStatus(204).end()
       }
     )
   )
-  .use((err: any, req: Request, res: Response, next: NextFunction) => {
+  .use((_: unknown, __: Request, res: Response) => {
     res.sendStatus(500).end()
   })
 
